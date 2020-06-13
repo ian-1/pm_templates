@@ -2,6 +2,32 @@
 
 A short program to provide quick tempates to help residential property managers respond to queries
 
+## To Use Program
+
+in irb:
+
+```
+irb(main):001:0> require '.\lib\template.rb'
+=> true
+irb(main):002:0> t = Template.new
+=> #<Template:0x2d473a0>
+irb(main):003:0> t.see_templates
+=> "1) Return holding deposit - offer not formally accepted"
+irb(main):004:0> content = t.select
+=> "The landlord has not formally accepted your offer. As such we will return your holding deposit to you.\n\nIt is very frustrating as the landlord did previously state that they would go with your offer.\n\nI am very sorry about this. It is very frustrating as you have paid your deposit ready for the landlord to formally accept. Unfortunately without formal acceptance there is little we can do but return your money.\n\nPlease can you pass me your bank details (name of account holder, account number and sort code) and I will ensure that your holding deposit is transferred back to you.\n\nI wish you every luck in your property search and will certainly let you know if any other similar properties become available so that you can be the first to view."
+irb(main):005:0> print(content)
+The landlord has not formally accepted your offer. As such we will return your holding deposit to you.
+
+It is very frustrating as the landlord did previously state that they would go with your offer.
+
+I am very sorry about this. It is very frustrating as you have paid your deposit ready for the landlord to formally accept. Unfortunately without formal acceptance there is little we can do but return your money.
+
+Please can you pass me your bank details (name of account holder, account number and sort code) and I will ensure that your holding deposit is transferred back to you.
+
+I wish you every luck in your property search and will certainly let you know if any other similar properties become available so that you can be the first to view.=> nil
+irb(main):006:0>
+```
+
 ## User Stories
 
 As a Property Manager
