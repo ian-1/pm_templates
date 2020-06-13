@@ -1,5 +1,9 @@
 class Template
   def see_templates
-    'Offer has not been formally accepted'
+    '1) Test template'
+  end
+
+  def select
+    'Test template contents'
   end
 end

@@ -9,6 +9,10 @@ So I can repond to an Applicant
 I want to be able to see templates to send to Applicants
 
 As a Property Manager
+So I can repond to an Applicant
+I want to select a template to send to an Applicant
+
+As a Property Manager
 So I can respond to an Applicant on <X> issue
 I want to be able to access a specific template on <X> issue
 
@@ -22,4 +26,4 @@ Objects | Messages
 ---|---
 Property Manager | 
 Applicant | 
-Template | see_templates
+Template | see_templates <br> select
