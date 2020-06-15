@@ -30,26 +30,36 @@ irb(main):006:0>
 
 ## User Stories
 
-As a Property Manager
-So I can repond to an Applicant
+As a Property Manager  
+So I can repond to an Applicant  
 I want to be able to see templates to send to Applicants
 
-As a Property Manager
-So I can repond to an Applicant
+As a Property Manager  
+So I can repond to an Applicant  
 I want to select a template to send to an Applicant
 
-As a Property Manager
-So I can respond to an Applicant on <X> issue
-I want to be able to access a specific template on <X> issue
+As a Property Manager  
+So I can respond to an Applicant on {X} issue  
+I want to be able to access a specific template on {X} issue
 
-<X>:
+{X}:
 
-- Let applicant know their offer has not been formally accepted
+- Return holding deposit - offer not formally accepted
 
-##Domain Model
+As a Property Manager  
+So I can keep a record of Actions carried out  
+I want to be able to record an action
+
+As a Property Manager  
+So I can see what Actions I have carried out  
+I want to be able to read actions
+
+
+## Domain Model
 
 Objects | Messages
 ---|---
-Property Manager | 
-Applicant | 
-Template | see_templates <br> select
+Property Manager |  
+Applicant |  
+Template | see_templates <br> select  
+Action | record  
