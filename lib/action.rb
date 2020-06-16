@@ -5,7 +5,7 @@ class Action
     file.close
   end
 
-  def read(user)
+  def read_last(user)
     file = File.open("#{user}_actions.llama", "r")
     file.readlines.each do |line|
       @message = line

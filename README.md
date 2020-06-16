@@ -51,9 +51,12 @@ So I can keep a record of Actions carried out
 I want to be able to record an action
 
 As a Property Manager  
-So I can see what Actions I have carried out  
-I want to be able to read actions
+So I can see what Action I have added  
+I want to be able to read last action
 
+As a Property Manager  
+So I can see past Actions  
+I want to be able to show list of actions
 
 ## Domain Model
 
@@ -62,4 +65,4 @@ Objects | Messages
 Property Manager |  
 Applicant |  
 Template | see_templates <br> select  
-Action | record  
+Action | record(user, message) <br> read_last(user) <br> show_list(user) 
