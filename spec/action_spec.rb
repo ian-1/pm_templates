@@ -13,4 +13,9 @@ describe Action do
     subject.record('test action')
     expect(subject.read).to eq('test action')
   end
+
+  it "check read returns contents of test.llama" do
+    system("echo 'test llama' > test.llama")
+    expect(subject.read).to eq("'test llama' \n")
+  end
 end
