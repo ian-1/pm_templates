@@ -1,5 +1,5 @@
 class Template
-  def see_templates
+  def self.see_templates
     '1) Return holding deposit - offer not formally accepted'
   end
 
