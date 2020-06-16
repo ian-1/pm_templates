@@ -1,11 +1,11 @@
 class Action
-  def record(user, message)
+  def self.record(user, message)
     file = File.open("#{user}_actions.llama", 'a')
     file.puts message
     file.close
   end
 
-  def read_last(user)
+  def self.read_last(user)
     file = File.open("#{user}_actions.llama", "r")
     file.readlines.each do |line|
       @message = line[0..-2]   # cuts ' \n' left by puts
@@ -14,7 +14,7 @@ class Action
     @message
   end
 
-  def show_list(user)
+  def self.show_list(user)
     list = []
     file = File.open("#{user}_actions.llama", "r")
     file.readlines.each do |line|
