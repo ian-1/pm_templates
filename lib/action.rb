@@ -1,12 +1,12 @@
 class Action
-  def record(message)
-    file = File.open('test.llama', 'w')
+  def record(user, message)
+    file = File.open("#{user}_actions.llama", 'w')
     file.print message
     file.close
   end
 
-  def read
-    file = File.open('test.llama', "r")
+  def read(user)
+    file = File.open("#{user}_actions.llama", "r")
     file.readlines.each do |line|
       @message = line
     end
