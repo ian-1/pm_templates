@@ -58,6 +58,10 @@ As a Property Manager
 So I can see past Actions  
 I want to be able to show list of actions
 
+As a System User  
+So I can edit templates (and the path to get to them) in a simple and easy to understand way  
+I want templates (and questions used to get to them) saved in simple files/folders that corespond to the 'tree' of questions that will be used to bring the user to the template 
+
 ## Domain Model
 
 Objects | Messages
