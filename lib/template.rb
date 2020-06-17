@@ -3,7 +3,7 @@ class Template
     '1) Return holding deposit - offer not formally accepted'
   end
 
-  def self.get_text(template)
+  def self.select(template)
     text = []
     file = File.open("#{template}.drama", "r")
     file.readlines.each do |line|
@@ -11,9 +11,5 @@ class Template
     end
     file.close
     text
-  end
-
-  def self.select
-    get_text('ap')
   end
 end

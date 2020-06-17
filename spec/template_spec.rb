@@ -13,7 +13,7 @@ describe Template do
     expect(described_class).to respond_to :select
   end
 
-  it "check see_templates returns template contents" do
+  it "check select returns template contents" do
     text = ['The landlord has not formally accepted your offer. As such we will return your holding deposit to you.',
             '',
             'It is disappointing as the landlord did previously state that they would go with your offer.',
@@ -23,6 +23,6 @@ describe Template do
             'Please can you pass me your bank details (name of account holder, account number and sort code) and I will ensure that your holding deposit is transferred back to you.',
             '',
             'I wish you every luck in your property search and will certainly let you know if any other similar properties become available so that you can be the first to view.']
-    expect(described_class.select).to eq(text)
+    expect(described_class.select('ap')).to eq(text)
   end
 end
