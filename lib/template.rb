@@ -16,7 +16,7 @@ class Template
   def self.read_tree(path)
     list = []
     question = []
-    file = File.open('.\templates\question.drama', 'r')
+    file = File.open(".\\templates\\#{path}question.drama", 'r')
     file.readlines.each do |line|
       list.push(line[0..-2])   # cuts ' \n' left by puts
     end

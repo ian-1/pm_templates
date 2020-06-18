@@ -15,7 +15,20 @@ class Page
     input
   end
 
-  def self.show_template(text)
+  def self.question_with_options(question)
+    puts (question[0])
+    i = 0
+    question.each do |option|
+      if i != 0
+        puts "      - #{option[0]}"
+      end
+      i += 1
+    end
+    input = gets.chomp
+    input
+  end
+
+  def self.show_text(text)
     new_page()
     line_break()
     puts text

@@ -1,4 +1,5 @@
 require '.\lib\template'
+require '.\lib\action'
 require '.\views\page'
 
 def standardise_answer(user_answer, standard_answer, acepted_answers)
@@ -13,16 +14,31 @@ def select_option(question, answers)
 end
 
 def see_template()
-  text = Template.select('ap')
-  Page.show_template(text)
+  path = ""
+  loop do
+    question = Template.read_tree(path)
+    break if question[0] == 'End'
+    if question[0] == 'File'
+      file = ".\\templates\\#{path}template"
+      text = Template.open_template(file)
+      Page.show_text(text)
+      break
+    end
+    print 'sfdsgfsd' if question[0] == 'File'
+    return_answer = Page.question_with_options(question)
+    question[1..-1].each { |answer| return_answer = standardise_answer(return_answer, answer[1][0], answer[1][1]) }
+    path += "#{return_answer}\\"
+  end
 end
 
 def record_action()
-  puts 'r_a'
+  message =   Page.question('Action to record:')
+  Action.record('user', message)
 end
 
 def list_actions()
-  puts 'l_a'
+  list = Action.show_list('user')
+  Page.show_text(list)
 end
 
 def action_options()
